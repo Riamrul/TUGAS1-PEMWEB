@@ -29,20 +29,6 @@ nav h2 {
     color: #4b3621;
 }
 
-.menu {
-    display: flex;
-    gap: 25px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.menu a:hover {
-    color: #8b5e34;
-}
-
 
 /* HOME */
 
@@ -82,10 +68,13 @@ nav h2 {
 
     text-decoration: none;
     border-radius: 5px;
+    transition: all 0.2s ease;
 }
 
 .button:hover {
     background-color: #8b5e34;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .book-icon {
@@ -221,10 +210,15 @@ footer {
 
 /* RESPONSIVE */
 
+/* RESPONSIVE */
+
 @media (max-width: 700px) {
 
     nav {
-        padding: 0 5%;
+        height: auto;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .menu {
@@ -234,11 +228,22 @@ footer {
     .home {
         flex-direction: column;
         text-align: center;
-        gap: 50px;
+        gap: 40px;
+        padding: 50px 5%;
     }
 
     .home h1 {
         font-size: 40px;
+    }
+
+    .book-icon {
+        width: 200px;
+        height: 200px;
+        font-size: 80px;
+    }
+
+    .page {
+        padding: 50px 5%;
     }
 
     .books {
@@ -248,5 +253,9 @@ footer {
 
     .book-card {
         width: 280px;
+    }
+
+    .about {
+        padding: 50px 5%;
     }
 }
